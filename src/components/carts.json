@@ -1,0 +1,28 @@
+[
+    {
+        "title":"Converse",
+        "price":45,
+        "img":"../imges/image-product-1.jpg",
+        "img-2":"../imges/image-product-2.jpg",
+        "img-3":"../imges/image-product-3.jpg"
+    },{
+        "title":"brand",
+        "price":45,
+        "img":"../imges/image-product-1.jpg",
+        "img-2":"../imges/image-product-2.jpg",
+        "img-3":"../imges/image-product-3.jpg"
+    },{
+        "title":"Nike",
+        "price":45,
+        "img":"../imges/image-product-1.jpg",
+        "img-2":"../imges/image-product-2.jpg",
+        "img-3":"../imges/image-product-3.jpg"
+    },{
+        "title":"zara",
+        "price":45,
+        "img":"../imges/image-product-1.jpg",
+        "img-2":"../imges/image-product-2.jpg",
+        "img-3":"../imges/image-product-3.jpg"
+    }
+]
+
