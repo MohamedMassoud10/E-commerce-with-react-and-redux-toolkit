@@ -1,6 +1,26 @@
 import React from 'react'
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { useParams, Link } from 'react-router-dom'
+import { fetchProduct } from '../redux/cartSystem';
+
+
 const SingleProductCart = ({props,productCount,setProductCount}) => {
+
+  let products=useSelector((state)=>state.products)
+  
+  console.log(products)
+
+  let dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(fetchProduct())
+  }, []);
+
+
+
+  
   let {title}=useParams();
   let handleIncClick=()=>{
     setProductCount(productCount+1)

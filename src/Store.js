@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import cartSystem from "./redux/cartSystem"
+import cart from "./redux/cartSystem"
 let store =configureStore({
     reducer:{
-        name:cartSystem,
+        products:cart,
     }
 })
 export default store
