@@ -4,20 +4,24 @@
         "price":45,
         "img":"../imges/image-product-1.jpg",
         "img-2":"../imges/image-product-2.jpg",
-        "img-3":"../imges/image-product-3.jpg"
+        "img-3":"../imges/image-product-3.jpg",
+        "ProductId":1
     },{
+        "ProductId":2,
         "title":"brand",
         "price":45,
         "img":"../imges/image-product-1.jpg",
         "img-2":"../imges/image-product-2.jpg",
         "img-3":"../imges/image-product-3.jpg"
     },{
+        "ProductId":3,
         "title":"Nike",
         "price":45,
         "img":"../imges/image-product-1.jpg",
         "img-2":"../imges/image-product-2.jpg",
         "img-3":"../imges/image-product-3.jpg"
     },{
+        "ProductId":4,
         "title":"zara",
         "price":45,
         "img":"../imges/image-product-1.jpg",
