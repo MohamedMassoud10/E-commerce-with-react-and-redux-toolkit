@@ -112,6 +112,7 @@ body{
     right: 21px;
     border-radius: 5px;
     box-shadow: 7px 20px 20px 20px #0000000f;
+    z-index: 1;
 }
 .cart .content{
   width: 300px;
@@ -262,6 +263,7 @@ body{
   height: 249px;
     width: 100%;
     border-radius: 6px 6px 0 0;
+    padding: 53px;
 }
 .product-card{
   box-shadow: 7px 20px 20px 20px #0000000d;
@@ -357,6 +359,9 @@ body{
   padding: 10px;
   background-color: #77777714;
   align-items: center;
+}
+.product-details .title{
+  width: 181px;
 }
 .addition .btns-inc-dec .inc{
   color: #cc6416;

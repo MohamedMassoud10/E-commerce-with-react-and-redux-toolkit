@@ -2,11 +2,12 @@ import React from 'react'
 import '../index.css'
 import { NavLink } from 'react-router-dom'
 import CartContent from '../pages/CartContent'
+import { useSelector } from 'react-redux'
 //import { useSelector } from 'react-redux'
 const Navbar = ({productCount}) => {
   let [showCart,setShowCart]=React.useState(false);
-  //let {carts}=useSelector()
- // console.log(carts)
+  let cart =useSelector(state=>state.cart)
+  console.log(cart)
   function handleClick(){
     setShowCart((prevent=>!prevent))
   }

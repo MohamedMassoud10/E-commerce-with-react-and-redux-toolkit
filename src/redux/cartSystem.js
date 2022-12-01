@@ -6,7 +6,6 @@ export let fetchProduct = createAsyncThunk("cart/fetchProduct",async()=>{
     let Data =res.json();
     return Data
 })
-
 const cart= createSlice({
     initialState:[],
     name:"cart",
@@ -19,4 +18,4 @@ const cart= createSlice({
 })
 export let {} =cart.actions;
 
-export default cart.reducer 
+export default cart.reducer
