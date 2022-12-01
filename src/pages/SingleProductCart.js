@@ -2,15 +2,13 @@ import React from 'react'
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, Await } from 'react-router-dom'
 import { fetchProduct } from '../redux/cartSystem';
-
 
 const SingleProductCart = ({props,productCount,setProductCount}) => {
 
-  let products=useSelector((state)=>state.products)
-  
-  console.log(products)
+  let products=useSelector((state)=>state.products);
+
 
   let dispatch = useDispatch()
 
@@ -32,6 +30,7 @@ const SingleProductCart = ({props,productCount,setProductCount}) => {
   }
   return (
     <div>
+      {products.map((e)=>console.log(e))}
       {props.filter(card=>card.title==title).map((card,index)=>(
         <div key={index} className="one-page">
           <div className="gallery">
