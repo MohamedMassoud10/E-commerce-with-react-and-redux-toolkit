@@ -3,12 +3,10 @@ import { useParams, Link, Await } from 'react-router-dom'
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { useEffect ,useState } from 'react';
+import { removeFromCart, increaseAmount, decreaseAmount } from '../redux/cartSystem'
 import { addToCart } from '../redux/cartSystem';
 const SingleProductCart = ({productCount,setProductCount,productsData}) => {
-  console.log(productsData)
-
 let dispatch=useDispatch()
-
   let {id}=useParams();
   let products=productsData.filter(card=>card.id==id).map((card,index)=>(
     <div key={index} className="one-page">
@@ -22,9 +20,8 @@ let dispatch=useDispatch()
         <h2>$ {card.price}</h2>
         <div className="addition">
           <div className="btns-inc-dec">
-            <div className="inc" >-</div>
-            <div className="num">{productCount}</div>
-            <div className="inc">+</div>
+            <div className="inc" onClick={()=>dispatch(decreaseAmount(card.id))}>-</div>
+            <div className="inc" onClick={()=>dispatch(increaseAmount(card.id))}>+</div>
           </div>
           <div className="button" onClick={()=>dispatch(addToCart(card.id))}><p>ADD TO CART</p></div>
         </div>

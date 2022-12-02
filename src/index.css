@@ -99,6 +99,12 @@ body{
     padding: 10px;
     border-bottom: 1px solid #77777745;
 }
+.empty-cart{
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
 .cart-none .content{
   position: absolute;
   top: 50%;
@@ -121,6 +127,7 @@ body{
   justify-content: space-between;
   padding: 14px;
   gap: 15px;
+  border-bottom: 1px solid #56535333;
 }
 .cart .content .car-detil{
   flex: 1;
@@ -149,7 +156,7 @@ body{
     background-color: #ec9e22;
     color: white;
     border-radius: 5px;
-    margin: 10px 0;
+    margin: 10px 3px;
     cursor: pointer;
 }
 
@@ -261,9 +268,10 @@ body{
 }
 .product-image{
   height: 249px;
-    width: 100%;
+    width: 77%;
     border-radius: 6px 6px 0 0;
     padding: 53px;
+    margin-left: 10%;
 }
 .product-card{
   box-shadow: 7px 20px 20px 20px #0000000d;
@@ -329,7 +337,8 @@ body{
   margin: 44px 0px;
 }
 .one-page img{
-  width: 277px;
+  width: 200px;
+  border-bottom: 6px solid #7777;
 }
 .product-cart-section {
   width: 330px;
@@ -342,7 +351,7 @@ body{
 }
 .product-cart-section h1{
   font-weight: 900;
-  font-size: 39px;
+  font-size: 20px;
   margin: 9px 0;
 }
 .product-cart-section h2{
@@ -363,6 +372,7 @@ body{
 }
 .product-details .title{
   width: 181px;
+  overflow: hidden;
 }
 .addition .btns-inc-dec .inc{
   color: #cc6416;
@@ -413,4 +423,63 @@ body{
 }
 .delete{
   color: red;
+}
+.con{
+  overflow-y: scroll;
+    height: 213px;
+}
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
 }

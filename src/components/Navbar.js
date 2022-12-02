@@ -1,19 +1,16 @@
 import React from 'react'
 import '../index.css'
-import { NavLink } from 'react-router-dom'
-import CartContent from '../pages/CartContent'
+import { Link, NavLink } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-const Navbar = ({productCount,productsData}) => {
+import { useDispatch } from 'react-redux'
+import { removeFromCart } from '../redux/cartSystem'
+const Navbar = ({productsData}) => {
+  let dispatch=useDispatch()
   let [showCart,setShowCart]=React.useState(false);
   let products = useSelector(state => state.cart.products)
-
-  console.log(products)
-  console.log(Object.keys(products)[0])
-
+  console.log(Object.keys(products))
   let array=[]
   array.push(Object.keys(products))
-  console.log(array[0])
-
   function handleClick(){
     setShowCart((prevent=>!prevent))
   }
@@ -40,24 +37,27 @@ const Navbar = ({productCount,productsData}) => {
           <h2>Cart</h2>
           <div className="con">
             {
+              Object.keys(products).length>0?
               array[0].map(e=>
+                <Link to={`/products-card/${e}`}>
                 <div className="content">
-                <img src={productsData[e].image} alt="" className="cartImg" />
+                <img src={productsData[e-1].image} alt="" className="cartImg" />
                     <div className="car-detil">
                         <div className="about-product">
                     <p>{productsData[e].title}</p>
-                    <p>amouny{` x `}5 <h4>358{`$`}</h4></p>
+                    <p>{products[e]}{` x   `}<h4>{productsData[e].price}$</h4></p>
                     </div>
-                <i class="fa-solid fa-trash-can delete"></i>
+                <i class="fa-solid fa-trash-can delete" onClick={()=>dispatch(removeFromCart(productsData[e].e))}></i>
                 </div>
-            </div>)
+            </div></Link>):<div className='empty-cart'>
+              <p>Your cart is empty . </p>
+            </div>
             }
-
+          </div>
           <div className="button-div">
               <div className="button">
               Checkout
               </div>
-          </div>
           </div>
       </div>
       </div>
