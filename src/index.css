@@ -411,3 +411,6 @@ body{
 .gallery img{
   border-radius: 5px;
 }
+.delete{
+  color: red;
+}

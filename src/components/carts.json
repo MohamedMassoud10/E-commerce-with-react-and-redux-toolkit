@@ -1,32 +1,75 @@
-[
-    {
-        "title":"Converse",
-        "price":45,
-        "img":"../imges/image-product-1.jpg",
-        "img-2":"../imges/image-product-2.jpg",
-        "img-3":"../imges/image-product-3.jpg",
-        "ProductId":1
-    },{
-        "ProductId":2,
-        "title":"brand",
-        "price":45,
-        "img":"../imges/image-product-1.jpg",
-        "img-2":"../imges/image-product-2.jpg",
-        "img-3":"../imges/image-product-3.jpg"
-    },{
-        "ProductId":3,
-        "title":"Nike",
-        "price":45,
-        "img":"../imges/image-product-1.jpg",
-        "img-2":"../imges/image-product-2.jpg",
-        "img-3":"../imges/image-product-3.jpg"
-    },{
-        "ProductId":4,
-        "title":"zara",
-        "price":45,
-        "img":"../imges/image-product-1.jpg",
-        "img-2":"../imges/image-product-2.jpg",
-        "img-3":"../imges/image-product-3.jpg"
+[{
+    "1": {
+        "id": "1",
+        "name": "T-Shirt 1",
+        "price": 100,
+        "picture": "https://ecom-fake-api.onrender.com/images/t-shirt-1.webp"
+    },
+    "2": {
+        "id": "2",
+        "name": "T-Shirt 2",
+        "price": 200,
+        "picture": "https://ecom-fake-api.onrender.com/images/t-shirt-2.webp"
+    },
+    "3": {
+        "id": "3",
+        "name": "T-Shirt 3",
+        "price": 300,
+        "picture": "https://ecom-fake-api.onrender.com/images/t-shirt-3.webp"
+    },
+    "4": {
+        "id": "4",
+        "name": "T-Shirt 4",
+        "price": 400,
+        "picture": "https://ecom-fake-api.onrender.com/images/t-shirt-4.webp"
+    },
+    "5": {
+        "id": "5",
+        "name": "Jacket 1",
+        "price": 10,
+        "picture": "https://ecom-fake-api.onrender.com/images/jacket-1.webp"
+    },
+    "6": {
+        "id": "6",
+        "name": "Jacket 2",
+        "price": 20,
+        "picture": "https://ecom-fake-api.onrender.com/images/jacket-2.webp"
+    },
+    "7": {
+        "id": "7",
+        "name": "Jacket 3",
+        "price": 30,
+        "picture": "https://ecom-fake-api.onrender.com/images/jacket-3.webp"
+    },
+    "8": {
+        "id": "8",
+        "name": "Jacket 4",
+        "price": 40,
+        "picture": "https://ecom-fake-api.onrender.com/images/jacket-4.webp"
+    },
+    "9": {
+        "id": "9",
+        "name": "Shoes 1",
+        "price": 1,
+        "picture": "https://ecom-fake-api.onrender.com/images/shoes-1.webp"
+    },
+    "10": {
+        "id": "10",
+        "name": "Shoes 2",
+        "price": 2,
+        "picture": "https://ecom-fake-api.onrender.com/images/shoes-2.webp"
+    },
+    "11": {
+        "id": "11",
+        "name": "Shoes 3",
+        "price": 3,
+        "picture": "https://ecom-fake-api.onrender.com/images/shoes-3.webp"
+    },
+    "12": {
+        "id": "12",
+        "name": "Shoes 4",
+        "price": 4,
+        "picture": "https://ecom-fake-api.onrender.com/images/shoes-4.webp"
     }
+}
 ]
-

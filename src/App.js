@@ -11,7 +11,7 @@ function App() {
 
   const [productsData, setProductsData] = useState({})
 
-
+  console.log(productsData)
     useEffect(() => {
       fetch('https://fakestoreapi.com/products')
   .then((response) => response.json())
