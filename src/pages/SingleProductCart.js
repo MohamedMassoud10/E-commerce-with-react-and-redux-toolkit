@@ -1,20 +1,16 @@
 import React from 'react'
 import { useParams, Link, Await } from 'react-router-dom'
-import { addtocart } from '../redux/slices';
-const SingleProductCart = ({props,productCount,setProductCount,dispatch}) => {
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { useEffect ,useState } from 'react';
+import { addToCart } from '../redux/cartSystem';
+const SingleProductCart = ({productCount,setProductCount,productsData}) => {
+  console.log(productsData)
+
+let dispatch=useDispatch()
+
   let {id}=useParams();
-  let handleIncClick=()=>{
-    setProductCount(productCount+1)
-
-    // dispatch(addtocart(card));
-  }
-
-  let handleDncClick=()=>{
-    if(productCount>0){
-      setProductCount(productCount-1)
-    }
-  }
-  let products=props.filter(card=>card.id==id).map((card,index)=>(
+  let products=productsData.filter(card=>card.id==id).map((card,index)=>(
     <div key={index} className="one-page">
       <div className="gallery">
       <img src={card.image} alt="" />
@@ -26,11 +22,11 @@ const SingleProductCart = ({props,productCount,setProductCount,dispatch}) => {
         <h2>$ {card.price}</h2>
         <div className="addition">
           <div className="btns-inc-dec">
-            <div className="inc" onClick={handleDncClick}>-</div>
+            <div className="inc" >-</div>
             <div className="num">{productCount}</div>
-            <div className="inc" onClick={handleIncClick}>+</div>
+            <div className="inc">+</div>
           </div>
-          <div className="button" onClick={()=>dispatch(addtocart(card))}><p>ADD TO CART</p></div>
+          <div className="button" onClick={()=>dispatch(addToCart(card.id))}><p>ADD TO CART</p></div>
         </div>
       </div>
     </div>

@@ -283,6 +283,7 @@ body{
 .cart-body .product-details{
   display: flex;
   justify-content: space-between;
+  height: 68px;
 }
 @media (max-width:768px){
 .carts-list {

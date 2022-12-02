@@ -3,11 +3,12 @@ import '../index.css'
 import { NavLink } from 'react-router-dom'
 import CartContent from '../pages/CartContent'
 import { useSelector } from 'react-redux'
-//import { useSelector } from 'react-redux'
-const Navbar = ({productCount}) => {
+const Navbar = ({productCount,productsData}) => {
   let [showCart,setShowCart]=React.useState(false);
-  let cart =useSelector(state=>state.cart)
-  console.log(cart)
+
+  let products = useSelector(state => state.cart.products)
+  console.log(Object.keys(products).length)
+
   function handleClick(){
     setShowCart((prevent=>!prevent))
   }
@@ -28,24 +29,18 @@ const Navbar = ({productCount}) => {
       </div>
       <i class="fa-solid fa-bars menu"></i>
       <div className="right-nav">
-      <i class="fa-solid fa-cart-shopping" onClick={handleClick}><div className="countCart">{productCount}</div></i>
+      <i class="fa-solid fa-cart-shopping" onClick={handleClick}><div className="countCart">{Object.keys(products).length}</div></i>
       <img src="../imges/104199376.jpg" alt="account-picture" />
       <div className={showCart?"cart":"cart-none"}>
           <h2>Cart</h2>
-          {productCount>0?<div className="con">
-          <CartContent/>
-          <CartContent/>
-          <CartContent/>
-          <CartContent/>
+          <div className="con">
+
           <div className="button-div">
               <div className="button">
               Checkout
               </div>
           </div>
           </div>
-          :<div className="content">
-            <p>You Cart is empty . </p>
-          </div>}
       </div>
       </div>
     </div>
@@ -53,13 +48,17 @@ const Navbar = ({productCount}) => {
 }
 
 export default Navbar
-/**
- * top: 50%;
-    position: absolute;
-    left: 48%;
-    transform: translate(-45%, -47%);
-    display: flex;
-    gap: 1.3rem;
-    flex-direction: column;
-    margin: 13px 0;
- */
+// {
+//   Object.keys(products).map((productId)=>{
+//     <div className="content">
+// <img src={productsData[productId].picture} alt="" className="cartImg" />
+//   <div className="car-detil">
+//       <div className="about-product">
+//   <p>{productsData[productId].title}</p>
+//   <p>amouny{` x `}5 <h4>358{`$`}</h4></p>
+//   </div>
+// <i class="fa-solid fa-trash-can"></i>
+// </div>
+// </div>
+//   })
+// }

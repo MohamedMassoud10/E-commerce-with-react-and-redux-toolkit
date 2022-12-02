@@ -6,29 +6,26 @@ import SingleProductCart from './pages/SingleProductCart'
 import Error from './pages/Error'
 import Navbar from './components/Navbar'
 import Collections from './components/Collections'
-import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
-import { useEffect } from 'react';
-import { fetchProduct } from '../src/redux/cartSystem';
+import { useState ,useEffect } from 'react'
 function App() {
 
-  let Products=useSelector((state)=>state.Some);
+  const [productsData, setProductsData] = useState({})
 
-  let dispatch = useDispatch()
 
-  useEffect(() => {
-    dispatch(fetchProduct())
-  }, []);
-
+    useEffect(() => {
+      fetch('https://fakestoreapi.com/products')
+  .then((response) => response.json())
+  .then((data) => setProductsData(data));
+  }, [])
 
   let [productCount,setProductCount]=React.useState(0)
   return (
     <div className='container'>
-    <Navbar productCount={productCount}/>
+    <Navbar productCount={productCount} productsData={productsData} />
     <Routes>
       <Route exact path='/' element={<Home/>}></Route>
-      <Route  path='/collections' element={<Collections/>}></Route>
-      <Route  path='/products-card/:id' element={<SingleProductCart dispatch={dispatch} props={Products} productCount={productCount} setProductCount={setProductCount}/>}></Route>
+      <Route  path='/collections' element={<Collections productsData={productsData}/>}></Route>
+      <Route  path='/products-card/:id' element={<SingleProductCart productCount={productCount} setProductCount={setProductCount} productsData={productsData}/>}></Route>
       <Route  path='*' element={<Error/>}></Route>
     </Routes>
     </div>
