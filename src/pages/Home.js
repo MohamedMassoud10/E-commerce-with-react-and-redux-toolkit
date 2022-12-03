@@ -1,7 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
+import { useState,useRef,useEffect } from 'react'
 const Home = () => {
-  return (
+  let  carouselRef=useRef()
+  let [width,setWidth]=useState(0)
+  useEffect(()=>{
+    setWidth(carouselRef.current.scrollWidth -carouselRef.current.offsetWidth)
+  },[])
+
+
+  return (<>
     <div className='homeBody'>
       <div className="overLay"></div>
       <div class="text">
@@ -15,6 +24,62 @@ const Home = () => {
         </div>
       </div>
     </div>
+    <div>
+      <motion.div className='carousel' ref={carouselRef}>
+          <motion.div drag="x" dragConstraints={{right:0 ,left: -width}} className='inner-carousel'>
+          
+          <motion.div className='item'>
+                  <img src="https://preview.colorlib.com/theme/aroma/img/home/hero-slide1.png.webp" alt="slider-images"/>
+                  <div className="caption">
+                    <div className="catoName">
+                    <Link to="/"><h3>Wireless Headphone</h3></Link>
+                    </div>
+                  </div>
+          </motion.div>
+          <motion.div className='item'>
+                  <img src="https://preview.colorlib.com/theme/aroma/img/home/hero-slide2.png.webp" alt="slider-images"/>
+                  <div className="caption">
+                    <div className="catoName">
+                    <Link to="/"><h3>Wireless Headphone</h3></Link>
+                    </div>
+                  </div>
+          </motion.div>
+          <motion.div className='item'>
+                  <img src="https://preview.colorlib.com/theme/aroma/img/home/hero-slide3.png.webp" alt="slider-images"/>
+                  <div className="caption">
+                    <div className="catoName">
+                      <Link to="/"><h3>Wireless Headphone</h3></Link>
+                    </div>
+                  </div>
+          </motion.div>
+          <motion.div className='item'>
+                  <img src="https://preview.colorlib.com/theme/aroma/img/home/hero-slide1.png.webp" alt="slider-images"/>
+                  <div className="caption">
+                    <div className="catoName">
+                    <Link to="/"><h3>Wireless Headphone</h3></Link>
+                    </div>
+                  </div>
+          </motion.div>
+          <motion.div className='item'>
+                  <img src="https://preview.colorlib.com/theme/aroma/img/home/hero-slide2.png.webp" alt="slider-images"/>
+                  <div className="caption">
+                    <div className="catoName">
+                    <Link to="/"><h3>Wireless Headphone</h3></Link>
+                    </div>
+                  </div>
+          </motion.div>
+          <motion.div className='item'>
+                  <img src="https://preview.colorlib.com/theme/aroma/img/home/hero-slide3.png.webp" alt="slider-images"/>
+                  <div className="caption">
+                    <div className="catoName">
+                    <Link to="/"><h3>Wireless Headphone</h3></Link>
+                    </div>
+                  </div>
+          </motion.div>
+          </motion.div>
+      </motion.div>
+    </div>
+    </>
   )
 }
 

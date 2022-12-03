@@ -3,7 +3,7 @@ import { useParams, Link, Await } from 'react-router-dom'
 import { useDispatch } from 'react-redux';
 import { increaseAmount, decreaseAmount } from '../redux/cartSystem'
 import { addToCart } from '../redux/cartSystem';
-const SingleProductCart = ({productCount,setProductCount,productsData}) => {
+const SingleProductCart = ({productsData}) => {
 let dispatch=useDispatch()
   let {id}=useParams();
   let products=productsData.filter(card=>card.id==id).map((card,index)=>(
