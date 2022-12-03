@@ -60,7 +60,6 @@ const Home = () => {
                     </div>
                   </div>
           </motion.div>
-
           <motion.div className='item'>
                   <img src="https://preview.colorlib.com/theme/aroma/img/home/hero-slide2.png.webp" alt="slider-images"/>
                   <div className="caption">
@@ -69,15 +68,6 @@ const Home = () => {
                     </div>
                   </div>
           </motion.div>
-          <motion.div className='item'>
-                  <img src="https://preview.colorlib.com/theme/aroma/img/home/hero-slide2.png.webp" alt="slider-images"/>
-                  <div className="caption">
-                    <div className="catoName">
-                    <Link to="/"><h3>Wireless Headphone</h3></Link>
-                    </div>
-                  </div>
-          </motion.div>
-
           <motion.div className='item'>
                   <img src="https://preview.colorlib.com/theme/aroma/img/home/hero-slide3.png.webp" alt="slider-images"/>
                   <div className="caption">
@@ -87,9 +77,13 @@ const Home = () => {
                   </div>
           </motion.div>
           </motion.div>
-          
       </motion.div>
     </div>
+    <footer>
+      <div className="footer-title">
+        <p>Copyright ©2022 All rights reserved | This template is made with <i class="fa-solid fa-heart"></i>  by Mohamed Massoud</p>
+      </div>
+    </footer>
     </>
   )
 }

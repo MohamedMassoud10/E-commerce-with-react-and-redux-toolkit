@@ -349,12 +349,12 @@ body{
 }
 @media (max-width:768px){
 .carts-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(247px, 1fr));
-  grid-column-gap: 40px;
-  grid-row-gap: 60px;
-  padding: 16px;
-  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  top: 15%;
 }
 .ul{
   display: none;
@@ -395,8 +395,8 @@ body{
 .cart-mobile{
   position: absolute;
     background-color: white;
-    top: 41px;
-    right: -103px;
+    top: 43px;
+    right: -38px;
     border-radius: 5px;
     box-shadow: 7px 20px 20px 20px #0000000f;
     z-index: 25;
@@ -704,6 +704,16 @@ body{
   height: 58px;
   font-size: 15px;
 }
-
+.footer-title{
+  height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-family: cursive;
+}
+.footer-title i{
+  color: red;
+}
 
 
