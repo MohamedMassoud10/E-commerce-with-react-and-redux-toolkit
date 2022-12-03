@@ -21,9 +21,8 @@ function App() {
   }, [])
 
   let [productCount,setProductCount]=React.useState(0)
-  return (
-    <div className='container'>
-    <Navbar productsData={productsData} />
+  return (<>
+  <Navbar productsData={productsData} />
     <div className="allScreen">
     <Routes>
       <Route exact path='/' element={<Home/>}></Route>
@@ -32,8 +31,7 @@ function App() {
       <Route  path='*' element={<Error/>}></Route>
     </Routes>
     </div>
-    </div>
-  )
+  </>)
 }
 
 export default App

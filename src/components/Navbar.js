@@ -15,6 +15,7 @@ const Navbar = ({productsData}) => {
     setShowCart((prevent=>!prevent))
   }
   return (
+    <div className="navContainer">
     <div className='Nav-bar'>
       
       <div className="logo">
@@ -62,7 +63,8 @@ const Navbar = ({productsData}) => {
       </div>
       </div>
     </div>
-  )
+    </div>
+    )
 }
 
 export default Navbar

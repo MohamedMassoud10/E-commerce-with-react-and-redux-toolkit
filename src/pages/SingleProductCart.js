@@ -29,8 +29,10 @@ let dispatch=useDispatch()
     </div>
   ))
   return (
+    <div className="container">
     <div>
       {products}
+    </div>
     </div>
   )
 }
