@@ -60,6 +60,7 @@ const Home = () => {
                     </div>
                   </div>
           </motion.div>
+
           <motion.div className='item'>
                   <img src="https://preview.colorlib.com/theme/aroma/img/home/hero-slide2.png.webp" alt="slider-images"/>
                   <div className="caption">
@@ -69,6 +70,15 @@ const Home = () => {
                   </div>
           </motion.div>
           <motion.div className='item'>
+                  <img src="https://preview.colorlib.com/theme/aroma/img/home/hero-slide2.png.webp" alt="slider-images"/>
+                  <div className="caption">
+                    <div className="catoName">
+                    <Link to="/"><h3>Wireless Headphone</h3></Link>
+                    </div>
+                  </div>
+          </motion.div>
+
+          <motion.div className='item'>
                   <img src="https://preview.colorlib.com/theme/aroma/img/home/hero-slide3.png.webp" alt="slider-images"/>
                   <div className="caption">
                     <div className="catoName">
@@ -77,6 +87,7 @@ const Home = () => {
                   </div>
           </motion.div>
           </motion.div>
+          
       </motion.div>
     </div>
     </>
