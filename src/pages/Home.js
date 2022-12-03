@@ -1,5 +1,5 @@
 import React from 'react'
-import CocktailList from '../components/Collections'
+import { Link } from 'react-router-dom'
 const Home = () => {
   return (
     <div className='homeBody'>
@@ -11,7 +11,7 @@ const Home = () => {
           </h2>
           <h1>BROWSE OUR PREMIUM PRODUCT</h1>
           <p>Us which over of signs divide dominion deep fill bring they're meat beho upon own earth without morning over third. Their male dry. They are great appear whose land fly grass.</p>
-          <div className="button">Browse Now</div>
+          <Link to="collections" className="button">Browse Now</Link>
         </div>
       </div>
     </div>

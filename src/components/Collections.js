@@ -1,7 +1,6 @@
 import React from 'react'
 import Cart from './cart'
-import Loading from '../pages/Loading'
-
+import LoadingPage from '../pages/LoadingPage'
 const Collections = ({productsData , Loading}) => {console.log(productsData)
   return (
     <div className="container">
@@ -10,7 +9,7 @@ const Collections = ({productsData , Loading}) => {console.log(productsData)
     return(
     <Cart img={e.image} title={e.title} price={e.price} id={e.id} key={e.id}/>
     )
-  }):<Loading/>}
+  }):<LoadingPage/>}
     </div>
     </div>
   )

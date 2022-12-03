@@ -1,9 +1,7 @@
 import React from 'react'
 import { useParams, Link, Await } from 'react-router-dom'
 import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
-import { useEffect ,useState } from 'react';
-import { removeFromCart, increaseAmount, decreaseAmount } from '../redux/cartSystem'
+import { increaseAmount, decreaseAmount } from '../redux/cartSystem'
 import { addToCart } from '../redux/cartSystem';
 const SingleProductCart = ({productCount,setProductCount,productsData}) => {
 let dispatch=useDispatch()

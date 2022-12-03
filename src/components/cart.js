@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../redux/cartSystem';
 const Cart = (props) => {
+    let dispatch=useDispatch()
     return (
         <>
         
@@ -11,7 +14,7 @@ const Cart = (props) => {
                 <div className="title">{props.title}</div>
                 <div className="price">{props.price}{`$`}</div>
             </div>
-          <Link to={`/products-card/${props.id}`}><div className="button">ADD TO CART</div></Link>
+          <Link to={`/products-card/${props.id}`}><div className="button" onClick={()=>dispatch(addToCart(props.id))}>ADD TO CART</div></Link>
             </div>
         </Link>
         </>
