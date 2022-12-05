@@ -13,6 +13,9 @@ function App() {
   const [productsData, setProductsData] = useState({});
   const [Loading, setLoading] = useState(false);
   useEffect(() => {
+    fetch("https://fakestoreapi.com/products")
+      .then((response) => response.json())
+      .then((data) => setProductsData(data));
     setProductsData(carts);
     setLoading(true);
   }, []);
