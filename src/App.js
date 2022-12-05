@@ -7,14 +7,13 @@ import Error from "./pages/Error";
 import Navbar from "./components/Navbar";
 import Collections from "./components/Collections";
 import { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import carts from "./components/carts.json";
 function App() {
+  console.log(carts);
   const [productsData, setProductsData] = useState({});
   const [Loading, setLoading] = useState(false);
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then((response) => response.json())
-      .then((data) => setProductsData(data));
+    setProductsData(carts);
     setLoading(true);
   }, []);
   return (
