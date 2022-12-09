@@ -18,7 +18,7 @@ function App() {
       .then((data) => {
         setProductsData(data);
       }); */
-    setProductData(carts);
+    setProductsData(carts);
     setLoading(true);
   }, []);
   return (
