@@ -9,16 +9,16 @@ import Collections from "./components/Collections";
 import { useState, useEffect } from "react";
 import carts from "./components/carts.json";
 function App() {
-  console.log(carts);
   const [productsData, setProductsData] = useState({});
   const [Loading, setLoading] = useState(false);
   useEffect(() => {
-    const apiUrl = "https://fakestoreapi.com/products";
+    /*const apiUrl = "https://fakestoreapi.com/products";
     fetch(apiUrl)
       .then((response) => response.json())
       .then((data) => {
         setProductsData(data);
-      });
+      });*/
+    setProductData(carts);
     setLoading(true);
   }, []);
   return (
