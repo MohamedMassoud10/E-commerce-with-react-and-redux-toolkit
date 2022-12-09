@@ -17,7 +17,7 @@ function App() {
       .then((response) => response.json())
       .then((data) => {
         setProductsData(data);
-      });*/
+      }); */
     setProductData(carts);
     setLoading(true);
   }, []);
